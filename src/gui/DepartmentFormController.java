@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.Set;
-
 import db.DbException;
 import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
@@ -70,7 +69,7 @@ public class DepartmentFormController implements Initializable {
 		entity = getFormData();
 		service.saveOrUpdate(entity);
 		notifydataChangeListeners();
-		Utils.CurentStage(event).close();
+		Utils.curentStage(event).close();
 		
 		}
 		catch (ValidationException e) {
@@ -110,7 +109,7 @@ public class DepartmentFormController implements Initializable {
 
 	@FXML
 	public void onBtCancelAction(ActionEvent event) {
-		Utils.CurentStage(event).close();
+		Utils.curentStage(event).close();
 	}
 
 	@Override
